@@ -11,17 +11,17 @@
             <h1>Hello World</h1>
         </div>
         <script type="text/babel">
-            var arr = ["hari", "ragu", "anu", "suraj"];
-
-            var name ='Hari';
-            const App = () => ( 
-                <>
-                <ul>
-                    {arr.map((num,index) => <li key={index}>{num}</li>)}
-                </ul>
-                </>
-            )   
-
+            
+           
+            function App(){
+                var loggedIn = true;
+                return(
+                    <>
+                    <h1>Hello {loggedIn?"Hari":"User"}</h1>
+                    <p>{loggedIn && "Welcome to the Portal"}</p>
+                    </>
+                )
+            }
 
         ReactDOM.createRoot(document.getElementById("root")).render(<App/>);  
         </script>
